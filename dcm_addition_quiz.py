@@ -3,6 +3,9 @@ import numpy as np
 from numpy import linalg as LA
 
 
+#Addition of DCM means multiply so we go from one frame of reference 
+#to another
+
 #Given three reference frame N, B, and F,
 #let the unit base vectors of the coordinate frames B and F be:
 #unit base vector components are written in the N frame

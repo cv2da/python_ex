@@ -1,0 +1,26 @@
+vectrix: matrix of vectors
+relative to N means that we already in the N frame
+DCM have singularities, gimble lock. There's ambiguity at this points
+If you use 4 coordinates enables to have non-singularities
+DCM have 9 coordinates, but they have 6 constraints. Thus 3 degrees of freedom rof rotation
+ 
+DCM first column cross 2nd = 3 column
+DCM 1st row cross product 2 row = 3 row 
+because they are right hand coordinate frames BN
+DCM has no singularities
+
+Proper orthogonal matrix means the determinant is 1
+DCM are proper orthogonal
+
+Addition of DCM means multiply so we go from one frame of reference 
+to another
+
+BN=NB.transpose()
+BN is how I go to body frame from inertial frame
+Identity matrix is like multiplying times 1
+
+DCM differential
+BN_dot=[omega_tilde_B_frame] [BN]
+
+omega is what you measure with a rate gyro
+DCM is my attitude 
