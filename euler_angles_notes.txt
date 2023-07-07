@@ -1,0 +1,33 @@
+
+euler angles:
+The three angles perform successive rotations about primary coordinate frame axes 
+without immediately repeating the same axis
+
+* B frame relative to N is BN
+The order of the rotation is important
+12 sets of euler angles combinations
+second sequence angle is where singularities occur
+the sequence matters!
+pitch, roll, and yaw, are examples of euler angles (3-2-1) sequence[asymmetric euler angles]
+Orbital plane angles is a (3-1-3) sequence rotation[symmetric euler angles]
+symmetric: 2nd angle, singularities at 0 or 180 degrees
+asymmetric: 2nd angle, singularities at +/- 90 degrees
+
+Mapping euler angles to rotation matrix:
+for a (3-2-1) sequence, go like C=(1-2-3)  
+To obtain final rotation matrix[RN]=[RB][BN]
+
+Topographic frame is a frame surface of earth
+Earth axit {n1,n2,n3}
+n3 is polar axis, and n1 is Vernal equinox(celestial thing)
+
+ex: 90 degree rotation about 3rd axis n3:
+
+M3(90)=[[ cos(90)  sin(90)    0]
+        [-sin(90)  cos(90)    0]
+        [  0         0        1]]
+
+Note that axis that doesn't rotate equals to 1 in row and column in matrix
+
+**When doing inverse mapping back to euler angles from roation sequence matrix,
+quadrant  must be checked with the inverse tangent function
